@@ -82,37 +82,62 @@
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">CPF</label>
-								<input class="formInput" type="Email" placeholder="CPF" name="cpf"> 
+								<input class="formInput" type="text" placeholder="CPF" name="cpf"> 
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">Situação</label>
-								<input class="formInput" type="tel" placeholder="Telefone" name="telefone">
+								<div class="formRadio">
+									<label><input type="radio" name="radioGenero1" >Ativo</label>
+									<label><input type="radio" name="radioGenero2" >Desligado</label>
+								</div>
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">Cargo</label>
-								<input class="formInput" type="text" placeholder="Celular" name="celular">
+								<select class="formInput">
+  									<option name="banhista" value="volvo">Banhista</option>
+  									<option name="tosador" value="saab">Tosador</option>
+  									<option name="recepcionista" value="opel">Recepcionista</option>
+								</select>
 							</div>
 						</div>
+
+				</form>
 						
 				
 				<div class="ContainerBotoes">
-					<a class="btnPrincipal" href="">Cadastrar</a>
+					<button onclick="sweetalertonclick()"><a class="btnPrincipal">Cadastrar</a></button>
+					<button><a class="btnPrincipal">Limpar</a></button>
+				</div>	
+
 					<script>
 							function sweetalertonclick(){
 							swal({
-								title: "Bom dia, Sandra! Essas sao suas tarefas para hoje:",
-								text: "- Ligar para Lucas Macedo para notificar vacina antibactericida da Lulu,",
-								icon: "img/logoControlaPet.png",
-								buttons: ["Ver mais","Entendi!"]
-						});
+ 								 title: "Esse funcionário terá acesso ao Sistema Controla Pet?",
+  								 icon: "img/logoControlaPet.png",
+  								 buttons: ["Não","Sim"],
+  								 dangerMode: true,
+							})
+							.then((willDelete) => {
+  							if (willDelete) {
+    							swal("Acesso adicionado com sucesso!", 
+    						{
+      							icon: "success",
+    						}
+
+    						);
+  							} else {
+    							swal("Funcionário sem acesso!",
+    						{
+    						  icon: "warning",
+    						}
+  							)}
+							})
 						}
 					
 						
 					</script>
-					<a class="btnPrincipal" href="">Limpar</a>
-				</div>	
 
-			</form>
+			
 
 
 
