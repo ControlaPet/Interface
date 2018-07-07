@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Base</title>
+	<title>Cadastro de funcionário</title>
 	<!--=========reset============-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--=========CSS============-->
@@ -101,43 +101,9 @@
 				</form>
 				
 				<div class="containerBotoes">
-					<button class="btnPrincipal" onclick="sweetalertonclick()">Cadastrar</button>
-					<button class="btnPrincipal" onclick="">Limpar</button>
-				</div>	
-
-					<script>
-							function sweetalertonclick(){
-							swal({
- 								 title: "Esse funcionário terá acesso ao Sistema Controla Pet?",
-  								 icon: "img/logoControlaPet.png",
-  								 buttons: ["Não","Sim"],
-  								 dangerMode: true,
-							})
-							.then((willDelete) => {
-  							if (willDelete) {
-    							swal("Acesso adicionado com sucesso!", 
-    						{
-      							icon: "success",
-    						}
-
-    						);
-  							} else {
-    							swal("Funcionário sem acesso!",
-    						{
-    						  icon: "warning",
-    						}
-  							)}
-							})
-						}
-					
-						
-					</script>
-
-			
-
-
-
-
+					<button class="btnPrincipal" onclick="aviso_acessoAoSistema()">Cadastrar</button>
+					<button class="btnPrincipal" type="reset">Limpar</button>
+				</div>
 
 		<!--===========FIMM===============-->
 

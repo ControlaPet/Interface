@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Base</title>
+	<title>Cadastro de proprietário</title>
 	<!--=========reset============-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--=========CSS============-->
@@ -77,11 +77,11 @@
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">CPF</label>
-								<input class="formInput" type="text" placeholder="CPF">
+								<input class="formInput" id="cpf" maxlength="14" type="text" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cpf();" placeholder="CPF">
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">RG</label>
-								<input class="formInput" type="text" placeholder="RG">
+								<input class="formInput" type="text" placeholder="RG" maxlength="12" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_rg();">
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">Email</label>
@@ -89,11 +89,11 @@
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">Telefone</label>
-								<input class="formInput" type="text" placeholder="Telefone">
+								<input class="formInput" type="text" id="telefone"  placeholder="Telefone" >
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">Celular</label>
-								<input class="formInput" type="text" placeholder="Celular">
+								<input class="formInput" id="celular" type="text" placeholder="Celular" maxlength="14" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_celular();">
 							</div>
 						</div>
 						<div class="col-sm">
@@ -162,9 +162,9 @@
 					</div>
 				</div>
 				
-				<div class="ContainerBotoes">
-					<a class="btnPrincipal" href="">Cadastrar</a>
-					<a class="btnPrincipal" href="">Limpar</a>
+				<div class="containerBotoes">
+					<button type="submi" class="btnPrincipal" href="">Cadastrar</a>
+					<button class="btnPrincipal" href="">Limpar</a>
 				</div>	
 
 			</form>
@@ -178,12 +178,14 @@
 	<footer>
 		<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
 	</footer>
-	<script src="js/hamburguer.js"></script>
-	<script src="js/scripts.js"></script>
-	<!--=========BOOTSTRAP============-->
+
+	<!--=========BOOTSTRAP/JQUERY============-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<!--=========/BOOTSTRAP============-->
+	<!--=========JS============-->
+	<script src="js/hamburguer.js"></script>
+	<script src="js/mascara_validacao.js"></script>
 </body>
 </html>
