@@ -1,5 +1,5 @@
 var checkbox = document.getElementById('navicon');
-var menuLateral = document.getElementById('MenuLateral');
+var menuLateral = document.getElementById('menuLateral');
 function menuSlide() {
 
 	if (checkbox.checked == true) {
