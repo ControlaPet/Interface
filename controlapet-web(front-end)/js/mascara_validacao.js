@@ -2,6 +2,8 @@
 var cpf      = document.getElementById("cpf");
 var rg       = document.getElementById("rg");
 var celular  = document.getElementById("celular");
+var telefone = document.getElementById("telefone");
+var cep      = document.getElementById("CEP");
 
 function mascara_cpf() {
   var key = event.keyCode || event.charCode;
@@ -22,6 +24,7 @@ function mascara_cpf() {
     cpf.value = "";
   }
 }
+
 function mascara_celular() {
   var key = event.keyCode || event.charCode;
 
@@ -33,11 +36,11 @@ function mascara_celular() {
     celular.value = celular.value + ")"; 
   }
   if (celular.value.length == 9){
-     celular.value = celular.value + "-" ; 
-  }
-  if( key == 8 || key == 46 ){
-    cpf.value = "";
-  }
+   celular.value = celular.value + "-" ; 
+ }
+ if( key == 8 || key == 46 ){
+  cpf.value = "";
+}
 
 }
 function mascara_rg() {
@@ -66,12 +69,43 @@ function mascara_apenas_numeros(e) {
     (e.keyCode >= 35 && e.keyCode <= 39)) {
     return;
 }
-if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-  e.preventDefault();
+if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {e.preventDefault();}
 }
+
+function mascara_telefone() {
+  var key = event.keyCode || event.charCode;
+
+  if (telefone.value.length == 1){
+    telefone.value = "(" + telefone.value ; 
+  }
+
+  if (telefone.value.length == 3){
+    telefone.value = telefone.value + ")"; 
+  }
+  if (telefone.value.length == 8){
+   telefone.value = telefone.value + "-" ; 
+ }
+ if( key == 8 || key == 46 ){
+   cpf.value = "";
+ }
 }
+
+function mascara_cep() {
+  var key = event.keyCode || event.charCode;
+
+  if (cep.value.length == 5){
+    cep.value = cep.value + "-"; ; 
+  }
+
+  if( key == 8 || key == 46 ){
+    cpf.value = "";
+  }
+}
+
+
+
 // -------------ALERTS----------------
-function aviso_acesso_sistema(){
+function aviso_acessoAoSistema(){
   swal({
     title: "Esse funcionário terá acesso ao Sistema Controla Pet?",
     icon: "img/logoControlaPet.png",
