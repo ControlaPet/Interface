@@ -3,7 +3,7 @@ var cpf      = document.getElementById("cpf");
 var rg       = document.getElementById("rg");
 var celular  = document.getElementById("celular");
 var telefone = document.getElementById("telefone");
-var cep      = document.getElementById("CEP");
+var cep      = document.getElementById("cep");
 
 function mascara_cpf() {
   var key = event.keyCode || event.charCode;
@@ -60,18 +60,6 @@ function mascara_rg() {
   }
 
 }
-
-function mascara_apenas_numeros(e) {
-  if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
-    (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
-    (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
-    (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
-    (e.keyCode >= 35 && e.keyCode <= 39)) {
-    return;
-}
-if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {e.preventDefault();}
-}
-
 function mascara_telefone() {
   var key = event.keyCode || event.charCode;
 
@@ -89,7 +77,6 @@ function mascara_telefone() {
    cpf.value = "";
  }
 }
-
 function mascara_cep() {
   var key = event.keyCode || event.charCode;
 
@@ -102,6 +89,16 @@ function mascara_cep() {
   }
 }
 
+function mascara_apenas_numeros(e) {
+  if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+    (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+    (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+    (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+    (e.keyCode >= 35 && e.keyCode <= 39)) {
+    return;
+}
+if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {e.preventDefault();}
+}
 
 
 // -------------ALERTS----------------
@@ -127,4 +124,24 @@ function aviso_acessoAoSistema(){
      }
      )}
     })
+}
+
+
+// -------------APIs----------------
+function preenche_endereco(){
+  url = "http://api.postmon.com.br/v1/cep/" + cep.value;
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.send();
+  
+  xhr.onreadystatechange = processRequest;
+  function processRequest(e) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var response = JSON.parse(xhr.responseText);
+      document.getElementById("endereco").value = response.logradouro;
+      document.getElementById("bairro").value = response.bairro;
+      document.getElementById("cidade").value = response.cidade;
+
+    }
+  }
 }
