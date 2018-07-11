@@ -2,6 +2,8 @@
 var cpf      = document.getElementById("cpf");
 var rg       = document.getElementById("rg");
 var celular  = document.getElementById("celular");
+var telefone = document.getElementById("telefone");
+var cep = document.getElementById("CEP");
 
 function mascara_cpf() {
   var key = event.keyCode || event.charCode;
@@ -22,6 +24,7 @@ function mascara_cpf() {
     cpf.value = "";
   }
 }
+
 function mascara_celular() {
   var key = event.keyCode || event.charCode;
 
@@ -69,6 +72,42 @@ function mascara_apenas_numeros(e) {
 if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
   e.preventDefault();
 }
+
+// -------------COMEÇO PARTE FEITA PELO VITOR----------------
+function mascara_telefone() {
+  var key = event.keyCode || event.charCode;
+
+  if (telefone.value.length == 1){
+    telefone.value = "(" + telefone.value ; 
+  }
+
+  if (telefone.value.length == 3){
+    telefone.value = telefone.value + ")"; 
+  }
+  if (telefone.value.length == 8){
+     telefone.value = telefone.value + "-" ; 
+  }
+  if( key == 8 || key == 46 ){
+    cpf.value = "";
+  }
+}
+
+function mascara_cep() {
+  var key = event.keyCode || event.charCode;
+
+  if (cep.value.length == 5){
+    cep.value = cep.value + "-"; ; 
+  }
+
+  if( key == 8 || key == 46 ){
+    cpf.value = "";
+  }
+}
+
+
+// -------------FIM PARTE FEITA PELO VITOR------------------- 
+ 
+
 }
 // -------------ALERTS----------------
 function aviso_acessoAoSistema(){
