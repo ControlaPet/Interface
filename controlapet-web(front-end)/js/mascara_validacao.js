@@ -71,7 +71,7 @@ if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.k
 }
 }
 // -------------ALERTS----------------
-function aviso_acessoAoSistema(){
+function aviso_acesso_sistema(){
   swal({
     title: "Esse funcionário terá acesso ao Sistema Controla Pet?",
     icon: "img/logoControlaPet.png",

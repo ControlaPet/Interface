@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="css/Header_Footer.css">
 	<link rel="stylesheet" type="text/css" href="css/hamburguer_menu.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/style2.css">
 	<link rel="icon" href="img/logoControlaPet.png" type="image/x-icon" >
 	<!--=========BOOTSTRAP============-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -20,82 +19,57 @@
 		<img src="img/logoControlaPetWhite.png" alt="Controla Pet">
 	</header>
 	
-	<main class="main">
-		<div id="menuLateral">
-			<div class="menuLateralPerfil">
-				<img class="perfilImg" src="img/perfil.png" alt="teste">
-				<h3>Pricila Santos</h3>
-			</div>
-			<div class="menuLateralItens">
-				<div class="item"><img src="img/1.png" alt="calendario"><h5><a href ="#">Calendário de vacinas</a></h5></div>
-				<div class="item"><img src="img/2.png" alt="ficha"><h5><a href ="#">Ficha animal</a></h5></div>
-				<div class="item"><img src="img/3.png" alt="mala"><h5><a href ="#">Acompanhe sua clínica</a></h5></div>
-				<div class="item"><img src="img/4.png" alt="coracao"><h5><a href ="#">Diagnóstico de animais</a></h5></div>
-				<div class="item"><img src="img/5.png" alt="pata"><h5><a href ="#">Cadastre um novo animal</a></h5></div>
-				<div class="item"><img src="img/6.png" alt="aviso"><h5><a href ="#">Avisos de vacinas</a></h5></div>
-				<div class="item"><img src="img/7.png" alt="agenda"><h5><a href ="#">Agenda de procedimentos</a></h5></div>
-				<div class="item"><img src="img/8.png" alt="hotel"><h5><a href ="#">Hospede um animal</a></h5></div>
-				<div class="item"><img src="img/9.png" alt="tesoura"><h5><a href ="#">Cadastro de serviços</a></h5></div>
+
+	<main class="conteudo">
+
+		<div class="titulo">
+			<div class="itensTitulo">
+				<div class="circulo">
+					<img src="img/5.png" alt="banana">
+				</div>
+				<h2>Login</h2>
 			</div>
 		</div>
 
-		<div class="conteudo">
-			<input type="checkbox" id="navicon">
-			<div class="nav-toggle">
-			  <label for="navicon" class="hamburger" onclick="menuSlide();">
-			    <span></span>
-			    <span></span>
-			    <span></span>
-			  </label>
-			</div>
-			<div class="titulo">
-				<div class="itensTitulo">
-					<div class="circulo">
-						<img src="img/5.png" alt="banana">
-					</div>
-					<h2>Login</h2>
-				</div>
-			</div>
-
 		<!--===========INSIRA AQUI SEU CONTEUDO===============-->
-		<section class="secao1">
-			<form method="get" action="minhaconta.html">
+		<form class="centralizadoVertical" method="post">
 
-				<h1 class="titulo">Seja Bem Vindo</h1>
-				<p class="digiteseusdados">Digite seus dados abaixo</p>
+			<h1 class="tituloGrande">Seja Bem Vindo</h1>
+			<p class="tituloMedio">Digite seus dados abaixo</p>
 
-				<p class="paragrafo1">
-    				<label for="texto-simples">Login:</label>
-    				<input class="formulario1" name="username" type="email" required id="texto-simples" autofocus>
-				</p>
+			<div class="dupla">
+				<label class="formLabel">Usuário:</label>
+				<input id class="formInput" name="usuario"  placeholder="Digite seu usuário..." maxlength="100" autofocus required>
+			</div>
+			<div class="dupla">
+				<label class="formLabel">Senha:</label>
+				<input class="formInput" name="senha" type="text" placeholder="Digite sua senha..." maxlength="100" required>
+			</div>
+			<div class="containerBotoes centralizadoVertical">
+				<button class="btnPrincipal" type="submit">Entrar</button>
+				<a class="" href="esqueceu_senha.html">Esqueceu a senha?</a>
+			</div>
 
-				<p class="paragrafo2">
-    				<label for="texto-simples">Senha:</label>
-    				<input class="formulario2" name="password" type="password" required id="texto-simples">
-				</p>
-
-				<ul class="esqueceuul">
-					<li class="esqueceu"><a class="esqueceua" href="esqueceu_senha.html">Esqueceu a senha?</a></li>
-				</ul>
-
-				<input class="botao" type="submit" value="Entrar">
-
-			</form>
-		</section>
+		</form>
 
 		<!--===========FIMM===============-->
 
-		</div>
 	</main>
 
 	<footer>
 		<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
 	</footer>
-	<script src="js/hamburguer.js"></script>
-	<!--=========BOOTSTRAP============-->
+	<!--=========SWEETALERT============-->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!--=========BOOTSTRAP/JQUERY============-->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<!--=========/BOOTSTRAP============-->
+	<!--=========JS============-->
+	<script src="js/menu.js"></script>
+	<script src="js/hamburguer.js"></script>
+	<script src="js/mascara_validacao.js"></script>
+
 </body>
 </html>
