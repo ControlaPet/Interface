@@ -57,20 +57,31 @@
 					<div class="circulo">
 						<img src="img/5.png" alt="banana">
 					</div>
-					<h2>Cadastro de Clientes</h2>
+					<h2>Cadastro de clientes</h2>
 				</div>
 			</div>
 
 			<!--===========INSIRA AQUI SEU CONTEUDO===============-->
+			<div class="etapas">
+				<div class="etapaItem etapaItemAtivo">
+					<a href="cadastro_cliente_dados_gerais.html">Dados gerais</a>
+				</div>
+				<div class="etapaItem">
+					<a href="cadastro_cliente_animal.html">Animal</a>
+				</div>
+				<div class="etapaItem">
+					<a href="cadastro_cliente_responsavel.html">Responsável de animal</a>
+				</div> 
+			</div>
 
-			<form class="FormCad" action="submit">
+			<form class="formulario" action="submit">
 				<div class="container">
 					<div class="row">
 						<img src=" " alt="">
 						<div class="col-sm">
 							<div class="dupla">
-								<label for="#" class="formLabel">Proprietário</label>
-								<input class="formInput" type="text" placeholder="Nome" autofocus name="proprietario" required>
+								<label for="#" class="formLabel">Cliente</label>
+								<input class="formInput" type="text" placeholder="Nome" autofocus name="cliente" required>
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">CPF</label>
@@ -86,18 +97,21 @@
 								<label for="#" class="formLabel">Tipo de Cliente</label>
 								<input list="tipoCliente" name="tipoCliente" placeholder="Escolha um tipo..." class="formInput" required>
 								<datalist id="tipoCliente">
-									<option value="Fisico">
-									<option value="Juridico">
-									<option value="Teste">
+									<option value="Mensal">
+									<option value="Eventual">
+									<option value="Plano">
 								</datalist> 
 							</div>
 						</div>
-						<div class="col-sm">
+						<div class="col-sm" id="caixaCep">
 							<div class="dupla">
 								<label for="#" class="formLabel">CEP</label>
 								<input id="cep" class="formInput" maxlength="9" placeholder="CEP" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cep();" onfocusout="preenche_endereco(this)">
 							</div>
 						</div>
+
+    					<div class="w-100"></div>
+
 						<div class="col-sm">
 							<div class="dupla">
 								<label for="#" class="formLabel">Endereço</label>
@@ -118,16 +132,14 @@
 								<input class="formInput" type="number" placeholder="Número">
 							</div>
 						</div>
-								</div>
-							</div>
-
+				</div>
 							
-							<div class="containerBotoes centralizado linha">
-								<a class="btnPrincipal" href="">Cadastrar</a>
-								<a class="btnPrincipal" href="">Limpar</a>
-							</div>	
+				<div class="containerBotoes centralizado linha">
+					<a class="btnPrincipal" href="">Cadastrar</a>
+					<a class="btnPrincipal" href="">Limpar</a>
+				</div>	
 
-						</form>
+			</form>
 
 
 

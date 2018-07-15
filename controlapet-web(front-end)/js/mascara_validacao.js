@@ -141,7 +141,6 @@ function preenche_endereco(){
       document.getElementById("endereco").value = response.logradouro;
       document.getElementById("bairro").value = response.bairro;
       document.getElementById("cidade").value = response.cidade;
-
     }
   }
 }
