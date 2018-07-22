@@ -85,7 +85,7 @@
 							</div>
 							<div class="dupla">
 								<label for="#" class="formLabel">CPF</label>
-								<input class="formInput" type="text" placeholder="CPF" name="cpf" maxlength="11" required>
+								<input class="formInput" type="text" placeholder="CPF" name="cpf" maxlength="14" id="cpf" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cpf();" required>
 							</div>
 						</div>
 						<div class="col-sm">
@@ -135,8 +135,8 @@
 				</div>
 							
 				<div class="containerBotoes centralizado linha">
-					<a class="btnPrincipal" href="">Cadastrar</a>
-					<a class="btnPrincipal" href="">Limpar</a>
+					<button class="btnPrincipal" href="">Cadastrar</button>
+					<button class="btnPrincipal" href="">Limpar</button>
 				</div>	
 
 			</form>
