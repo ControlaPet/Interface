@@ -1,12 +1,8 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Cadastro de cliente</title>
+	<title>Procedimento Clínico</title>
 	<!--=========reset============-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--=========CSS============-->
@@ -57,111 +53,72 @@
 					<div class="circulo">
 						<img src="img/5.png" alt="banana">
 					</div>
-					<h2>Cadastro de clientes</h2>
+					<h2>Cadastro de animal</h2>
 				</div>
 			</div>
 
 			<!--===========INSIRA AQUI SEU CONTEUDO===============-->
-			<div class="etapas">
-				<div class="etapaItem etapaItemAtivo">
-					<a href="cadastro_cliente_dados_gerais.html">Dados gerais</a>
+			<div class="etapas centralizado">
+				<div class="etapaItem centralizado">
+					<a href="cadastro_animal_etapa_1.html">Cliente</a>
 				</div>
-				<div class="etapaItem">
-					<a href="cadastro_cliente_responsavel.html">Responsável de animal</a>
-				</div> 
+				<div class="etapaItem centralizado">
+					<a href="cadastro_animal_etapa_2.html">Animal</a>
+				</div>
+				<div class="etapaItem centralizado">
+					<a href="cadastro_animal_etapa_3.html">?Complementos?</a>
+				</div>
+				<div class="etapaItem centralizado etapaItemAtivo">
+					<a href="cadastro_animal_etapa_4.html">?Vivo?</a>
+				</div>
+				<div class="etapaItem centralizado">
+					<a href="cadastro_animal_etapa_5.html">Responsável</a>
+				</div>
 			</div>
 
-			<form class="formulario" action="submit">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm">
-							<div class="dupla">
-								<label for="#" class="formLabel">Cliente</label>
-								<input class="formInput" type="text" placeholder="Nome" autofocus name="cliente" required>
-							</div>
-							<div class="dupla">
-								<label for="#" class="formLabel">CPF</label>
-								<input class="formInput" type="text" placeholder="CPF" name="cpf" maxlength="14" id="cpf" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cpf();" required>
-							</div>
-						</div>
-						<div class="col-sm">
-							<div class="dupla">
-								<label for="#" class="formLabel">Email</label>
-								<input class="formInput" type="Email" placeholder="Email" name="email" required> 
-							</div>
-							<div class="dupla">
-								<label for="#" class="formLabel">Tipo de Cliente</label>
-								<select id="tipoCliente" class="formInput" required>
-									<option value="Mensal">Mensal</option>
-									<option value="Eventual">Eventual</option>
-									<option value="Plano">Plano</option>
-								</select>
+			<div class="titulo">
+				
+				<form class="formulario" action="submit">
+					<div class="container">
+						<div class="row">
+							<h4 class="tituloMedio">Este animal está vivo?</h4>
+							<div class="col-sm">
+								<div class="dupla">
+									<label for="#" class="formLabel">Responda:</label>
+									<div class="formRadio">
+										<label><input type="radio" name="Sim">Sim</label>
+										<label><input type="radio" name="Não">Não</label>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col-sm" id="caixaCep">
-							<div class="dupla">
-								<label for="#" class="formLabel">CEP</label>
-								<input id="cep" class="formInput" maxlength="9" placeholder="CEP" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cep();" onfocusout="preenche_endereco(this)">
-							</div>
-						</div>
-
-						<div class="w-100"></div>
-
-						<div class="col-sm">
-							<div class="dupla">
-								<label for="#" class="formLabel">Endereço</label>
-								<input id="endereco" class="formInput" type="text" placeholder="Endereço">
-							</div>
-							<div class="dupla">
-								<label for="#" class="formLabel">Bairro</label>
-								<input id="bairro" class="formInput" type="text" placeholder="Bairro">
-							</div>	
-						</div>
-						<div class="col-sm">
-							<div class="dupla">
-								<label for="#" class="formLabel">Cidade</label>
-								<input id="cidade" class="formInput" type="text" placeholder="Cidade">
-							</div>										
-							<div class="dupla">
-								<label for="#" class="formLabel">Número</label>
-								<input class="formInput" type="number" placeholder="Número">
-							</div>
-						</div>
-					</div>
-				</div>
+					</div>					
+				</form>
 				
 				<div class="containerBotoes centralizado linha">
-					<button class="btnPrincipal" href="">Cadastrar</button>
-					<button class="btnPrincipal" href="">Limpar</button>
+					<button class="btnPrincipal" type="submit">Cadastrar</button>
+					<button class="btnPrincipal" type="clear">Limpar</button>
 				</div>	
 
-			</form>
+				<!--===========FIMM===============-->
 
-
-
-			<!--===========FIMM===============-->
-
+			</div>
 		</main>
 
 		<footer>
 			<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
-		</footer>	
-		<!--=========SWEETALERT============-->
-
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-		<!--=========BOOTSTRAP/JQUERY============-->
-
+		</footer>
+		<script src="js/hamburguer.js"></script>
+		<!--=========BOOTSTRAP============-->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
+		<!--=========/BOOTSTRAP============-->
 		<!--=========JS============-->
 
 		<script src="js/menu.js"></script>
 		<script src="js/hamburguer.js"></script>
 		<script src="js/mascara_validacao.js"></script>
-
+		
 	</body>
 	</html>
