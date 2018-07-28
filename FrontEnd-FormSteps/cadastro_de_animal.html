@@ -1,0 +1,223 @@
+	<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>ControlaPet - Cadastro de Animais</title>
+		<!--=========reset============-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--=========CSS============-->
+		<link rel="stylesheet" type="text/css" href="css/Header_Footer.css">
+		<link rel="stylesheet" type="text/css" href="css/hamburguer_menu.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="icon" href="img/logoControlaPet.png" type="image/x-icon" >
+		<link rel="stylesheet" type="text/css" href="css/style_form.css">
+
+		<!--=========BOOTSTRAP============-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<!--=========/BOOTSTRAP============-->
+	</head>
+	<body>
+		<header>
+			<img src="img/logoControlaPetWhite.png" alt="Controla Pet">
+		</header>
+		
+		<main class="main">
+			<div id="menuLateral">
+				<div class="menuLateralPerfil">
+					<img class="perfilImg" src="img/perfil.png" alt="teste">
+					<h3>Pricila Santos</h3>
+				</div>
+				<div class="menuLateralItens">
+					<button  class="item" type="button" data-toggle="collapse" data-target="#submenuCalendarioDeVacinas" aria-expanded="false" aria-controls="collapseExample"><img src="img/1.PNG" alt="calendario"><h5><a href ="#">Calendário de vacinas</a></h5></button>
+					<div class="submenu collapse" id="submenuCalendarioDeVacinas">
+						<div class="subItem">
+							<img src="img/2.PNG" alt="ficha">
+							<h5><a href ="#">Ficha animal</a></h5>
+						</div>
+						<div class="subItem">
+							<img src="img/2.PNG" alt="ficha">
+							<h5><a href ="#">Ficha animal</a></h5>
+						</div>
+						<div class="subItem">
+							<img src="img/2.PNG" alt="ficha">
+							<h5><a href ="#">Ficha animal</a></h5>
+						</div>
+					</div>
+
+
+
+					<div class="item"><img src="img/2.PNG" alt="ficha">		<h5><a href ="#">Ficha animal</a></h5></div>
+					<div class="item"><img src="img/3.PNG" alt="mala">		<h5><a href ="#">Acompanhe sua clínica</a></h5></div>
+					<div class="item"><img src="img/4.PNG" alt="coracao">	<h5><a href ="#">Diagnóstico de animais</a></h5></div>
+					<div class="item"><img src="img/5.PNG" alt="pata">		<h5><a href ="#">Cadastre um novo animal</a></h5></div>
+					<div class="item"><img src="img/6.PNG" alt="aviso">		<h5><a href ="#">Avisos de vacinas</a></h5></div>
+					<div class="item"><img src="img/7.PNG" alt="agenda">	<h5><a href ="#">Agenda de procedimentos</a></h5></div>
+					<div class="item"><img src="img/8.PNG" alt="hotel">		<h5><a href ="#">Hospede um animal</a></h5></div>
+					<div class="item"><img src="img/9.PNG" alt="tesoura">	<h5><a href ="#">Cadastro de serviços</a></h5></div>
+				</div>
+			</div>
+
+			<div class="conteudo">
+				<input type="checkbox" id="navicon">
+				<div class="nav-toggle">
+					<label for="navicon" class="hamburger" onclick="menuSlide();">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+				</div>
+				<div class="titulo">
+					<div class="itensTitulo">
+						<div class="circulo">
+							<img src="img/5.PNG" alt="banana">
+						</div>
+					</div>
+				</div>
+
+				<!--===========INSIRA AQUI SEU CONTEUDO===============-->
+				<form class='formulario'>
+					<ul id="progress">
+						<li class="ativo">Buscar Animal</li>
+						<li>Cadastro</li>
+						<li>Informações Complementares</li>
+						<li>Observações</li>
+						<li>Responsáveis</li>
+
+					</ul>
+
+					<fieldset>
+						<h3>Buscar Animal</h3>
+						<p>Digite o CPF do Proprietario ou nome do Animal!</p>
+						<input type="search" name="cpf" placeholder="Digite o CPF do Proprietario..."/>
+						<input type="submit" name="next" class="next acao" value="Buscar"/>
+					</fieldset>
+					<fieldset id="form_maior">
+						<h2>Dados cadastrais</h2>
+						<p>Digite algumas informações do animal!</p>
+
+						<input type="text" name="nome" placeholder="Nome"/>
+
+						<input type="text" name="especie" placeholder="Especie"/>
+
+						<input type="text" name="raca" placeholder="Raça"/>
+
+						<input type="text" name="cor" placeholder="Cor"/>
+
+						<input type="date" name="data_nasc" placeholder="Data de Nascimento"/>
+						
+						<p>Sexo: </p>
+						<div class="formRadio">
+							<label><input type="radio" name="Sim">Masculino</label>
+							<label><input type="radio" name="Não">Feminino</label>
+						</div>						
+
+						<input type="submit" name="prev" class="prev acao" value="Anterior"/>
+						<input type="submit" name="next" class="next acao" value="Proximo"/>
+					</fieldset>					
+					<fieldset>
+						<h2>Informações Complementares</h2>
+
+						<p>Estamos quase lá! Se preferir, digite algumas informações complementares</p>
+						
+						<input type="text" name="microchip" placeholder="Microchip"/>
+
+						
+						<p>O animal está vivo?</p>
+						<div class="formRadio">
+							<label><input type="radio" name="Sim">Sim</label>
+							<label><input type="radio" name="Não">Não</label>
+						</div>
+
+						<input type="submit" name="prev" class="prev acao" value="Anterior"/>
+						<input type="submit" name="next" class="next acao" value="Proximo"/>
+					</fieldset>	
+
+					<fieldset>
+						<h2>Observações</h2>
+						<textarea name="message" rows="5" cols="30">
+						</textarea>
+						<input type="submit" name="prev" class="prev acao" value="Anterior"/>
+						<input type="submit" name="next" class="next acao" value="Proximo"/>					
+					</fieldset>		
+					<fieldset>
+						<h2>Responsáveis</h2>
+						<p>Por favor, nos diga quais os responsáveis pelo animal</p>
+						<input type="text" name="cpf" placeholder="CPF">
+						<input type="text" name="nome" placeholder="Nome">
+						<input type="tel" name="telefone" placeholder="Telefone">
+						<input type="submit" name="prev" class="prev acao" value="Anterior"/>
+						<input type="submit" name="fim'" class="acao" value="Finalizar"/>
+
+					</fieldset>
+
+				</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!--===========FIMM===============-->
+
+			</div>
+		</main>
+
+		<footer>
+			<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
+		</footer>		
+		<!--=========SWEETALERT============-->
+
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+		<!--=========BOOTSTRAP/JQUERY============-->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+		
+		<!--=========JS============-->
+
+		<script src="js/menu.js"></script>
+		<script src="js/hamburguer.js"></script>
+		<script src="js/mascara_validacao.js"></script>
+
+		<!-- FORM -->
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/function.js"></script>
+
+	</body>
+	</html>
