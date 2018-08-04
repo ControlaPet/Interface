@@ -61,7 +61,16 @@
 .formInput{
 	width: 250px;
 	height: 37px;
+	border: .9px solid #A9A9A9;
 	padding-left: 10px;
+	border-radius: 4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	outline: none;
+	box-sizing: border-box;
+}
+.formInput:focus{
+	border:1px solid rgba(255, 102, 0, 0.9);
 }
 .formRadio{	
 	border:.5px solid #A9A9A9;
@@ -105,6 +114,152 @@
 .containerBotoes a{
 	margin:5px; 
 }
+@media (max-width: 500px) {
+	.formLabel{
+		font-size: 13px;
+		width: 120px;
+	}
+	.formInput{
+		font-size: 12px;
+	}
+	.formRadio{
+		font-size: 13px;
+	}
+}
+@media (max-width: 425px) {
+	.formLabel{
+		width: 100px;
+		font-size: 12px;
+	}
+	.formInput, .formRadio{
+		width: 220px;
+	}
+}
+@media (max-width: 375px) {
+	.formLabel{
+		font-size: 12px;
+	}
+	.formLabel{
+		width: 90px;
+		font-size: 12px;
+	}
+	.formInput,.formRadio{
+		width: 210px;
+	}
+}
+/**===========================Formularios em Etapas===================**/
+.formularioEtapas{
+	width: 600px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+.formularioEtapas h2, .formularioEtapas h3{
+	color: #ff6600;
+	text-align: center;
+	margin-bottom: 20px; 
+	font-weight: bold;
+}
+.formularioEtapas p{
+	text-align: center;
+	margin-bottom: 15px;
+}
+.formularioEtapas fieldset{
+	background: white;
+	box-shadow: 0 0 15px 1px rgba(0,0,0,0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+	margin-top: 10%;
+}
+.formularioEtapas fieldset:not(:first-of-type){
+	display: none;
+}
+.formularioEtapas input, .formularioEtapas textarea{
+	padding: 10px;
+	margin: 10px;
+	width: 80%;
+	color: rgba(255, 102, 0)
+}
+.formularioEtapas input.acao, .formularioEtapas input.next.acao, .formularioEtapas input.prev.acao{
+	padding: 10px;
+	margin: 10px;
+	color:white;
+	font-weight: bold;
+	background: #ff6600;
+	border:1px solid rgba(255, 102, 0, 0.9);
+	border-radius: 4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	outline: none;
+	box-sizing: border-box;
+	width: 30%
+
+}
+
+.formularioEtapas input.acao:hover{background: #c14e01; cursor: pointer;}
+
+footer{
+	background: #212529;
+}
+.formularioEtapas #progress{
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+#progress{
+	margin-top: 10%;
+	margin-left: -25%;
+	width: 200%;
+}
+.formularioEtapas #progress li{
+	list-style-type: none;
+	color: rgba(134,134,134);
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+	float: left;
+	width: 15%;
+	position: relative;
+}
+.formularioEtapas #progress li:before{
+	content:counter(step);
+	counter-increment: step;
+	font-size: 15px;
+	width: 40px;
+	display: block;
+	line-height: 40px;
+	background: rgba(134,134,134);
+	color: white;
+	border-radius:30px;
+	-moz-border-radius:30px;
+	-webkit-border-radius:40px;
+	margin: 0 auto 10px auto;
+}
+.formularioEtapas #progress li:after{
+	content: '';
+	width: 100%;
+	background: rgba(134,134,134);
+	height: 2px;
+	position: absolute;
+	top: 17px;
+	left: -50%;
+	z-index: -1;
+}
+.formularioEtapas #progress li:first-child:after{
+	content: none;
+}
+.formularioEtapas #progress li.ativo:before, .formularioEtapas #progress li.ativo:after{
+	background: #ff6600;
+	color: white;
+	text-shadow: 0 1px 0;	
+}
+.formularioEtapas #progress li.ativo{
+	color: #ff6600;
+}
+
 /**===========================Cards===========================**/
 .cardContorno{
 	height: 100%;
@@ -144,80 +299,6 @@
 	}
 }
 
-/**============Formulario em etapas===========================**/
-.etapas{
-	border-bottom: 1.5px dashed #f2f2f2;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: row;
-}
-.etapaItem{
-	font-weight: 600;
-	margin: 5px 1px 0px 1px;
-	padding: 3px 7px;
-	border-bottom: 0!important;
-	border:1.3px solid #666;
-	border-radius: 10px 10px 0px 0px;
-	background-color: #f2f2f2;
-}
-.etapaItem a{
-	color: #000;
-}	
-.etapaItem a:hover{
-	color: #000;
-}	
-.etapaItemAtivo{
-	background-color: #ff6600;
-}
-.etapaItemAtivo a{
-	color: #FFF!important;
-}
-.etapaItemAtivo a:hover{
-	color: #FFF!important;
-}
-@media (max-width: 500px) {
-	.etapaItem{
-		font-size: 13px;
-	}
-	.formLabel{
-		font-size: 13px;
-		width: 120px;
-	}
-	.formInput{
-		font-size: 12px;
-	}
-	.formRadio{
-		font-size: 13px;
-	}
-}
-@media (max-width: 425px) {
-	.etapaItem{
-		font-size: 11px;
-	}
-	.formLabel{
-		width: 100px;
-		font-size: 12px;
-	}
-	.formInput,.formRadio{
-		width: 220px;
-	}
-}
-@media (max-width: 375px) {
-	.etapaItem{
-		font-size: 10px;
-	}
-	.formLabel{
-		font-size: 12px;
-	}
-	.formLabel{
-		width: 90px;
-		font-size: 12px;
-	}
-	.formInput,.formRadio{
-		width: 210px;
-	}
-}
 /**===========================específicos===========================**/
 #paginationActive a{
 	background-color: #ff6600!important;
