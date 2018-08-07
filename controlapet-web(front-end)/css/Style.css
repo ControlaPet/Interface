@@ -4,6 +4,10 @@
 	justify-content: flex-start;
 	align-items: center;
 }
+#calendar {
+    max-width: 700px;
+    margin: 0 auto;
+}
 .direita{
 	display: flex;
 	justify-content: flex-end;
