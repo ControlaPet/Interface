@@ -61,39 +61,84 @@
 				<div class="titulo">
 					<div class="container esquerda coluna">
 						<!--===========ANIMAL===============-->
-						<div class="linha esquerda cardContorno">
-							<div class="imagemCard">
-								<img src="img/cachorro_ficha_animal.jpg" alt="Cachorrinho 1">
-							</div>
-							<div class="conteudoCard linha esquerda">
-								<div class="coluna destacadoEsquerdaDireita">
-									<div class="dupla">
-										<label for="#" class="formLabel">Nome:</label>
-										<input id="endereco" class="formInput" type="text" value="Luluzinho" disabled>
+						<a data-toggle="modal" data-target="#modal_1">
+							<div class="linha esquerda cardContorno">
+								<div class="imagemCard">
+									<img src="img/cachorro_ficha_animal.jpg" alt="Cachorrinho 1">
+								</div>
+								<div class="conteudoCard linha esquerda">
+									<div class="coluna destacadoEsquerdaDireita">
+										<div class="dupla">
+											<label for="#" class="formLabel">Nome:</label>
+											<input id="endereco" class="formInput" type="text" value="Luluzinho" disabled>
+										</div>
+										<div class="dupla">
+											<label for="#" class="formLabel">Raça:</label>
+											<input id="endereco" class="formInput" type="text" value="Cachorro" disabled>
+										</div>
 									</div>
-									<div class="dupla">
-										<label for="#" class="formLabel">Raça:</label>
-										<input id="endereco" class="formInput" type="text" value="Cachorro" disabled>
+									<div class="coluna destacadoEsquerdaDireita">
+										<div class="dupla">
+											<label for="#" class="formLabel">Espécie:</label>
+											<input id="endereco" class="formInput" type="text" value="Pitbull" disabled>
+										</div>
+										<div class="dupla">
+											<label for="#" class="formLabel">Dono:</label>
+											<input id="endereco" class="formInput" type="text" value="Janete Samaritana" disabled>
+										</div>
 									</div>
 								</div>
-								<div class="coluna destacadoEsquerdaDireita">
-									<div class="dupla">
-										<label for="#" class="formLabel">Espécie:</label>
-										<input id="endereco" class="formInput" type="text" value="Pitbull" disabled>
-									</div>
-									<div class="dupla">
-										<label for="#" class="formLabel">Dono:</label>
-										<input id="endereco" class="formInput" type="text" value="Janete Samaritana" disabled>
+							</div>
+							<div class="containerBotoes centralizado linha">
+								<button class="btnPrincipal" type="submit">Cadastrar</button>
+								<button class="btnPrincipal" type="reset">Excluir</button>
+							</div>	
+						</a>
+						<!-- Modal -->
+						<div class="modal fade" id="modal_1" tabindex="-1" role="dialog" aria-labelledby="modal_1Label" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="modal_1Label">Cadastrar um animal</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+								<div class="centralizado">	
+									<div class="imagemCard destacadoCimaBaixo coluna">
+										<img src="img/cachorro_ficha_animal.jpg" class="destacadoCimaBaixo" alt="Cachorrinho 1">
+										<input type="file" name="arquivos" class="formFileInput"  accept="image/png, image/jpeg"  multiple /> 
 									</div>
 								</div>
-							</div>
+								<div class="dupla">
+									<label for="#" class="formLabel">Nome Serviço</label>
+									<input class="formInput" type="text" placeholder="Nome do Serviço" autofocus name="nome" required>
+								</div>
+								<div class="dupla">
+									<label for="#" class="formLabel">Descrição</label>
+									<input class="formInput" type="text" placeholder="Descrição" name="descricao" required>
+								</div>
+								<div class="dupla">
+									<label for="#" class="formLabel">Espécie</label>
+									<input class="formInput" type="text" placeholder="Espécie" name="descricao" required>
+								</div>
+								<div class="dupla">
+									<label for="#" class="formLabel">Preço</label>
+									<input class="formInput" type="text" placeholder="Preço" name="descricao" onkeydown="mascara_apenas_numeros(event);" required>
+								</div>
+								<div class="dupla">
+									<label for="#" class="formLabel">Tipo Procedimento</label>
+									<input class="formInput" type="text" placeholder="Tipo de Procedimento" name="descricao" required>
+								</div>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btnSecundario clearMarginTop" data-dismiss="modal">Close</button>
+						        <button type="button" class="btnPrincipal clearMarginTop">Save changes</button>
+						      </div>
+						    </div>
+						  </div>
 						</div>
-						
-				
-						<div class="containerBotoes centralizado linha">
-							<button class="btnPrincipal" type="submit">Cadastrar</button>
-							<button class="btnPrincipal" type="reset">Excluir</button>
-						</div>	
 						<!--===========ANIMAL===============-->
 						<div class="linha esquerda cardContorno">
 							<div class="imagemCard">
@@ -126,7 +171,6 @@
 							<button class="btnPrincipal" href="">Editar</button>
 							<button class="btnPrincipal" href="">Excluir</button>
 						</div>	
-
 						<!--===========ANIMAL===============-->
 						<div class="linha esquerda cardContorno">
 							<div class="imagemCard">

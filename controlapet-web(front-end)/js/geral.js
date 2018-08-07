@@ -1,3 +1,4 @@
+//=====================Formulário em etapas=======================
 $(function(){
 	var atual_fs, next_fs, prev_fs;
 
@@ -25,7 +26,16 @@ $(function(){
 
 });
 
-  $( function() {
-    $( "#Data" ).datepicker();
-  } );
+//=====================Calendário=======================
+
+$( function() {
+  $( "#Data" ).datepicker();
+} );
+
+
+//=====================Modal=======================
+
+$('#FormModal').on('shown.bs.modal', function () {
+  $('#FormModal').trigger('focus')
+})
 
