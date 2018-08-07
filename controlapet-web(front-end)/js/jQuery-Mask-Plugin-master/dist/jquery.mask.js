@@ -1,50 +1,42 @@
-// -------------ALERTS----------------
-function aviso_acessoAoSistema(){
-  swal({
-    title: "Esse funcionário terá acesso ao Sistema Controla Pet?",
-    icon: "img/logoControlaPet.png",
-    buttons: ["Não","Sim"],
-    dangerMode: true,
-  })
-  .then((willDelete) => {
-    if (willDelete) {
-      swal("Acesso adicionado com sucesso!", 
-      {
-        icon: "success",
-      }
+/**
+ * jquery.mask.js
+ * @version: v1.14.15
+ * @author: Igor Escobar
+ *
+ * Created by Igor Escobar on 2012-03-10. Please report any bug at github.com/igorescobar/jQuery-Mask-Plugin
+ *
+ * Copyright (c) 2012 Igor Escobar http://igorescobar.com
+ *
+ * The MIT License (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
 
-      );
-    } else {
-      swal("Funcionário sem acesso!",
-      {
-       icon: "warning",
-     }
-     )}
-    })
-}
+/* jshint laxbreak: true */
+/* jshint maxcomplexity:17 */
+/* global define */
 
-// -------------APIs----------------
-function preenche_endereco(){
-  url = "http://api.postmon.com.br/v1/cep/" + cep.value;
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.send();
-  
-  xhr.onreadystatechange = processRequest;
-  function processRequest(e) {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      var response = JSON.parse(xhr.responseText);
-      document.getElementById("endereco").value = response.logradouro;
-      document.getElementById("bairro").value = response.bairro;
-      document.getElementById("cidade").value = response.cidade;
-    }
-  }
-}
-
-
-
-//==================================== Máscaras JQUERY==============
-
+// UMD (Universal Module Definition) patterns for JavaScript modules that work everywhere.
+// https://github.com/umdjs/umd/blob/master/templates/jqueryPlugin.js
 (function (factory, jQuery, Zepto) {
 
     if (typeof define === 'function' && define.amd) {
@@ -610,27 +602,3 @@ function preenche_endereco(){
         }
     }, globals.watchInterval);
 }, window.jQuery, window.Zepto));
-$(document).ready(function(){
-  $('.data').mask('00/00/0000');
-  $('.hora').mask('00:00:00');
-  $('.data_hora').mask('00/00/0000 00:00:00');
-  $('.cep').mask('00000-000');
-  $('.celular').mask('00000-0000');
-  $('.ddd_celular').mask('(00) 00000-0000');
-  $('.cpf').mask('000.000.000-00', {reverse: true});
-  $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
-  $('.hora').mask('000.000.000.000.000,00', {reverse: true});
-  $('.percent').mask('##0,00%', {reverse: true});
-  $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
-  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
-  $('.fallback').mask("00r00r0000", {
-      translation: {
-        'r': {
-          pattern: /[\/]/,
-          fallback: '/'
-        },
-        placeholder: "__/__/____"
-      }
-    });
-  $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
-});
