@@ -13,7 +13,7 @@ $(function() {
     // THIS KEY WON'T WORK IN PRODUCTION!!!
     // To make your own Google API key, follow the directions here:
     // http://fullcalendar.io/docs/google_calendar/
-    googleCalendarApiKey: 'AIzaSyCj753IljI6MYJ0T0JCCsAALvCROE_Zweo',
+    googleCalendarApiKey: 'AIzaSyBIF-wWrAJvGoLIXuAVQ0sVJCpaHJ4Pkjk',
 
     // US Holidays
     events: 'controlapet@gmail.com',
