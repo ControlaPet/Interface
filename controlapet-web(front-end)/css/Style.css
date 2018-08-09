@@ -45,7 +45,9 @@
 .clearMarginTop{
 	margin-top:0!important;
 }
-
+.telaTamanhoFixo{
+	height: 452px;
+}
 /**===========================Formularios===================**/
 .formulario{
 	width: 100%;
@@ -69,9 +71,6 @@
 	height: 37px;
 	border: .9px solid #A9A9A9;
 	padding-left: 10px;
-	border-radius: 4px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
 	outline: none;
 	box-sizing: border-box;
 }
@@ -441,8 +440,13 @@ p{
 	font-weight:bold;
 	margin-top:25px;
 }
+.tituloGrande, .tituloExtraGrande{
+	color: #000;	
+}
+.tituloMedio, .tituloPequeno{
+	color: #ff6600;	
+}
 .tituloExtraGrande, .tituloGrande, .tituloMedio, .tituloPequeno{
-	color: #ff6600;
 	width: 100%;
 	text-align: center;
 	margin-top: 10px;

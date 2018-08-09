@@ -32,6 +32,10 @@ $( function() {
   $( "#Data" ).datepicker();
 } );
 
+$('.btnEditar').click(function(){
+	$("#formularioModal :input").prop('readonly', false);
+});
+
 
 //=====================Modal=======================
 

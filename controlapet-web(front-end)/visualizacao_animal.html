@@ -89,10 +89,6 @@
 									</div>
 								</div>
 							</div>
-							<div class="containerBotoes centralizado linha">
-								<button class="btnPrincipal" type="submit">Cadastrar</button>
-								<button class="btnPrincipal" type="reset">Excluir</button>
-							</div>	
 						</a>
 						<!-- Modal -->
 						<div class="modal fade" id="modal_1" tabindex="-1" role="dialog" aria-labelledby="modal_1Label" aria-hidden="true">
@@ -100,6 +96,7 @@
 						    <div class="modal-content">
 						      <div class="modal-header">
 						        <h5 class="modal-title" id="modal_1Label">Cadastrar um animal</h5>
+						        <button class="close"><img src="img/editar.png" alt=""></button>
 						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						          <span aria-hidden="true">&times;</span>
 						        </button>
@@ -111,30 +108,28 @@
 										<input type="file" name="arquivos" class="formFileInput"  accept="image/png, image/jpeg"  multiple /> 
 									</div>
 								</div>
-								<div class="dupla">
-									<label for="#" class="formLabel">Nome Serviço</label>
-									<input disabled class="formInput" type="text" placeholder="Nome do Serviço" autofocus name="nome" required>
-								</div>
-								<div class="dupla">
-									<label for="#" class="formLabel">Descrição</label>
-									<input disabled class="formInput" type="text" placeholder="Descrição" name="descricao" required>
-								</div>
-								<div class="dupla">
-									<label for="#" class="formLabel">Espécie</label>
-									<input disabled class="formInput" type="text" placeholder="Espécie" name="descricao" required>
-								</div>
-								<div class="dupla">
-									<label for="#" class="formLabel">Preço</label>
-									<input disabled class="formInput" type="text" placeholder="Preço" name="descricao" required>
-								</div>
-								<div class="dupla">
-									<label for="#" class="formLabel">Tipo Procedimento</label>
-									<input disabled class="formInput" type="text" placeholder="Tipo de Procedimento" name="descricao" required>
-								</div>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btnSecundario clearMarginTop" data-dismiss="modal">Fechar</button>
-						        <button type="button" class="btnPrincipal clearMarginTop">Editar</button>
+								<form method="Post" id="formularioModal">
+									<div class="dupla">
+										<label for="#" class="formLabel">Nome Serviço</label>
+										<input disabled class="formInput" type="text" placeholder="Nome do Serviço" autofocus name="nome" required>
+									</div>
+									<div class="dupla">
+										<label for="#" class="formLabel">Descrição</label>
+										<input disabled class="formInput" type="text" placeholder="Descrição" name="descricao" required>
+									</div>
+									<div class="dupla">
+										<label for="#" class="formLabel">Espécie</label>
+										<input disabled class="formInput" type="text" placeholder="Espécie" name="descricao" required>
+									</div>
+									<div class="dupla">
+										<label for="#" class="formLabel">Preço</label>
+										<input disabled class="formInput" type="text" placeholder="Preço" name="descricao" required>
+									</div>
+									<div class="dupla">
+										<label for="#" class="formLabel">Tipo Procedimento</label>
+										<input disabled class="formInput" type="text" placeholder="Tipo de Procedimento" name="descricao" required>
+									</div>
+								</form>
 						      </div>
 						    </div>
 						  </div>
@@ -167,10 +162,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="containerBotoes centralizado linha">
-							<button class="btnPrincipal" href="">Editar</button>
-							<button class="btnPrincipal" href="">Excluir</button>
-						</div>	
 						<!--===========ANIMAL===============-->
 						<div class="linha esquerda cardContorno">
 							<div class="imagemCard">
@@ -199,12 +190,6 @@
 								</div>
 							</div>
 						</div>
-						
-				
-						<div class="containerBotoes centralizado linha">
-							<button class="btnPrincipal" href="">Editar</button>
-							<button class="btnPrincipal" href="">Excluir</button>
-						</div>	
 						<!--===========PAGINAÇÃO===============-->
 					</div>	
 					<div class="centralizado destacadoCimaBaixo">
@@ -242,7 +227,7 @@
 			<!--=========/BOOTSTRAP============-->
 			<!--=========JS============-->
 
-			<script src="js/menu.js"></script>
+			<script src="js/geral.js"></script>
 			<script src="js/hamburguer.js"></script>
 			<script src="js/mascara_validacao.js"></script>
 
