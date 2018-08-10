@@ -29,7 +29,7 @@
 			<div id="menuLateral">
 				<div class="menuLateralPerfil">
 					<img class="perfilImg" src="img/perfil.png" alt="teste">
-					<h3 class="tituloExtraGrande">Pricila Santos</h3 class="tituloExtraGrande">
+					<h3 class="tituloExtraGrande"		>Pricila Santos</h3 class="tituloExtraGrande"		>
 				</div>
 				<div class="menuLateralItens">
 					<button  class="item" type="button" data-toggle="collapse" data-target="#submenuCalendarioDeVacinas" aria-expanded="false" aria-controls="collapseExample"><img src="img/1.PNG" alt="calendario"><h5><a href ="#">Calendário de vacinas</a></h5></button>
@@ -89,9 +89,9 @@
 					</ul>
 
 					<fieldset>
-						<h3 class="tituloExtraGrande">Buscar Animal</h3 class="tituloExtraGrande">
+						<h3 class="tituloExtraGrande">Buscar Animal</h3 class="tituloExtraGrande"		>
 						<p>Digite o CPF do Proprietario ou nome do Animal!</p>
-						<input type="search" class="formEtapasInput cpf" name="cpf" placeholder="Digite o CPF do Proprietario..."/ maxlength="14" id="cpf" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cpf();">
+						<input type="search" class="formEtapasInput" name="cpf" placeholder="Digite o CPF do Proprietario..."/ maxlength="14" id="cpf" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cpf();">
 						<div class="containerBotoes">
 							<input type="submit" name="next" class="next acao btnPrincipal " value="Buscar"/>
 						</div>
@@ -109,8 +109,8 @@
 						<p>Sexo</p>
 						<div class="formEtapasDupla">
 							<div class="formEtapasRadio">
-								<label><input type="radio" name="sexo" >Masculino</label>
-								<label><input type="radio" name="sexo" >Feminino</label>
+								<label><input type="radio" name="Masculino" >Masculino</label>
+								<label><input type="radio" name="Feminino" >Feminino</label>
 							</div>
 						</div>
 						<div class="containerBotoes">
@@ -126,8 +126,8 @@
 						<p>O animal está vivo?</p>
 						<div class="formEtapasDupla">
 							<div class="formEtapasRadio">
-								<label><input type="radio" name="simnao">Sim</label>
-								<label><input type="radio" name="simnao">Não</label>
+								<label><input type="radio" name="Sim">Sim</label>
+								<label><input type="radio" name="Não">Não</label>
 							</div>
 						</div>
 						<div class="containerBotoes">
@@ -148,9 +148,9 @@
 					<fieldset>
 						<h2 class="tituloGrande">Responsáveis</h2 class="tituloGrande">
 						<p>Por favor, nos diga quais os responsáveis pelo animal</p>
-						<input type="search" class="formEtapasInput cpf" name="cpfresponsavel" placeholder="Digite o CPF do Responsável..."/ maxlength="14">
+						<input type="text" class="formEtapasInput" id="cpf" placeholder="CPF" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_cpf();" maxlength="14">
 						<input type="text" class="formEtapasInput" name="nome" placeholder="Nome" maxlength="50">
-						<input type="tel"  class="formEtapasInput ddd_celular" name="telefone" placeholder="Telefone" maxlength="14">
+						<input type="tel"  class="formEtapasInput" name="telefone" placeholder="Telefone" id="telefone" onkeydown="mascara_apenas_numeros(event);" onkeyup="mascara_telefone();" maxlength="13">
 						<div class="containerBotoes">
 							<input type="submit" name="prev" class="prev acao btnPrincipal" value="Anterior"/>
 							<input type="submit" name="fim'" class="acao btnPrincipal" value="Finalizar"/>
