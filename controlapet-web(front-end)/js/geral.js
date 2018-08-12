@@ -26,11 +26,16 @@ $(function(){
 
 });
 
-//=====================Calendário=======================
+//=====================Campo data=======================
 
 $( function() {
   $( "#Data" ).datepicker();
 } );
+
+$("#formularioModal :input").prop('readonly', true);
+$('.btnEditar').click(function(){
+	$("#formularioModal :input").prop('readonly', false);
+});
 
 
 //=====================Modal=======================
@@ -39,3 +44,12 @@ $('#FormModal').on('shown.bs.modal', function () {
   $('#FormModal').trigger('focus')
 })
 
+$(window).on('load',function(){
+    $('#modalBemVindo').modal('show');
+});
+
+
+
+function habilitaCampos(){
+	document.getElementsByClassName("input.formInput").prop('disabled', false);
+}

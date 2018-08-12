@@ -5,19 +5,24 @@
 		<title>Ficha Animal</title>
 		<!--=========reset============-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!--=========CSS============-->
-		<link rel="stylesheet" type="text/css" href="css/header_footer.css">
-		<link rel="stylesheet" type="text/css" href="css/hamburguer_menu.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/style2.css">
-		<link rel="icon" href="img/logocontrolapet.png" type="image/x-icon" >
+		<!--=========css============-->
+		<link rel="stylesheet" type="text/css" href="css/Header_Footer.css">
+		<link rel="stylesheet" type="text/css" href="css/Hamburguer_Menu.css">
+		<link rel="stylesheet" type="text/css" href="css/Style.css">
+		<link rel="icon" href="img/logoControlaPet.png" type="image/x-icon" >
 		<!--=========BOOTSTRAP============-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-		<!--=========/BOOTSTRAP============-->
+		<!--=========JQUERY============-->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.12.1/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.12.1/jquery-ui.structure.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.12.1/jquery-ui.theme.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+	</head>
 	</head>
 	<body>
 		<header>
-			<img src="img/logocontrolapetwhite.png" alt="Controla Pet">
+			<img src="img/logocontrolapetwhite.png" class="logoHeader" alt="Controla Pet">
 		</header>
 
 		<main class="main">
@@ -51,7 +56,7 @@
 				<div class="tituloHeader">
 					<div class="itensTitulo">
 						<div class="circulo">
-							<img src="img/5.png" alt="banana">
+							<img src="img/5.png" alt="Imagem Animal">
 						</div>
 						<h2>Animais</h2>
 					</div>
@@ -90,8 +95,6 @@
 								</div>
 							</div>
 							<div class="containerBotoes centralizado linha">
-								<button class="btnPrincipal" type="submit">Cadastrar</button>
-								<button class="btnPrincipal" type="reset">Excluir</button>
 							</div>
 						</a>
 						<!-- Modal -->
@@ -106,9 +109,9 @@
 						      </div>
 						      <div class="modal-body">
 								<div class="centralizado">
-									<div class="imagemCard destacadoCimaBaixo coluna">
+									<div class="imagemCardModal coluna">
 										<img src="img/cachorro_ficha_animal.jpg" class="destacadoCimaBaixo" alt="Cachorrinho 1">
-										<input type="file" name="arquivos" class="formFileInput"  accept="image/png, image/jpeg"  multiple />
+										<input type="file" name="arquivos" class="formFileInput esquerda"  accept="image/png, image/jpeg"  multiple />
 									</div>
 								</div>
 								<div class="dupla">
@@ -134,7 +137,7 @@
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btnSecundario clearMarginTop" data-dismiss="modal">Fechar</button>
-						        <button type="button" class="btnPrincipal clearMarginTop">Editar</button>
+						        <button type="button" class="btnPrincipal clearMarginTop" onclick="habilitaCampos();">Editar</button>
 						      </div>
 						    </div>
 						  </div>
@@ -166,11 +169,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="containerBotoes centralizado linha">
-							<button class="btnPrincipal" href="">Editar</button>
-							<button class="btnPrincipal" href="">Excluir</button>
-						</div>
+						</div> 
 						<!--===========ANIMAL===============-->
 						<div class="linha esquerda cardContorno">
 							<div class="imagemCard">
@@ -200,11 +199,7 @@
 							</div>
 						</div>
 
-
-						<div class="containerBotoes centralizado linha">
-							<button class="btnPrincipal" href="">Editar</button>
-							<button class="btnPrincipal" href="">Excluir</button>
-						</div>
+ 
 						<!--===========PAGINAÇÃO===============-->
 					</div>
 					<div class="centralizado destacadoCimaBaixo">
@@ -234,17 +229,25 @@
 			<footer>
 				<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
 			</footer>
-			<script src="js/hamburguer.js"></script>
-			<!--=========BOOTSTRAP============-->
-			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<!--=========SWEETALERT============-->
+
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+			<!--=========BOOTSTRAP/JQUERY============-->
+
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41jstQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-			<!--=========/BOOTSTRAP============-->
-			<!--=========JS============-->
 
-			<script src="js/menu.js"></script>
-			<script src="js/hamburguer.js"></script>
-			<script src="js/mascara_validacao.js"></script>
+			<!--=========js============-->
+			<script src="js/Hamburguer.js"></script>
+			<script src="js/Mascara_Validacao.js"></script>
+			<script type="text/javascript" src="js/Geral.js"></script>
 
 		</body>
 		</html>

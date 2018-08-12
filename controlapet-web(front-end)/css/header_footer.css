@@ -15,6 +15,10 @@ header{
 	justify-content: flex-start;
 	padding: 10px;
 }
+.logoHeader{
+    margin-left: 20px;
+    width: 60px;
+}
 #menuLateral{
 	width: 300px;
 	height: auto;

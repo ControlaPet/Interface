@@ -5,7 +5,7 @@
 	<title>Login</title>
 	<!--=========reset============-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!--=========CSS============-->
+	<!--=========css============-->
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 	<link rel="stylesheet" type="text/css" href="css/hamburguer_menu.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -16,7 +16,7 @@
 </head>
 <body>
 	<header>
-		<img src="img/logocontrolapetwhite.png" alt="Controla Pet">
+		<img src="img/logocontrolapetwhite.png" class="logoHeader" alt="Controla Pet">
 	</header>
 
 
@@ -27,27 +27,27 @@
 				<div class="circulo">
 					<img src="img/5.png" alt="patinha">
 				</div>
-				<h2>Login</h2>
 			</div>
 		</div>
 
 		<!--===========INSIRA AQUI SEU CONTEUDO===============-->
-		<form class="centralizado coluna" method="post">
+		<form class="centralizado coluna telaTamanhoFixo" method="post">
+			<div class="formulario">
+				<h1 class="tituloGrande">Seja Bem Vindo!</h1>
+				<p class="tituloPequeno">Digite seus dados abaixo.</p>
 
-			<h1 class="tituloGrande">Seja Bem Vindo</h1>
-			<p class="tituloPequeno">Digite seus dados abaixo</p>
-
-			<div class="dupla">
-				<label class="formLabel">Usuário:</label>
-				<input id class="formInput" name="usuario"  placeholder="Digite seu usuário..." maxlength="100" autofocus required>
-			</div>
-			<div class="dupla">
-				<label class="formLabel">Senha:</label>
-				<input class="formInput" name="senha" type="text" placeholder="Digite sua senha..." maxlength="100" required>
-			</div>
-			<div class="containerBotoes centralizado coluna">
-				<button class="btnPrincipal" type="submit">Entrar</button>
-				<a class="" href="esqueceu_senha.html">Esqueceu a senha?</a>
+				<div class="dupla">
+					<label class="formLabel">Usuário:</label>
+					<input id class="formInput" name="usuario"  placeholder="Digite seu usuário..." maxlength="100" autofocus required>
+				</div>
+				<div class="dupla">
+					<label class="formLabel">Senha:</label>
+					<input class="formInput" name="senha" type="password" placeholder="Digite sua senha..." maxlength="100" required>
+				</div>
+				<div class="containerBotoes centralizado coluna">
+					<button class="btnPrincipal" type="submit">Entrar</button>
+					<a class="" href="esqueceu_senha.html">Esqueceu a senha?</a>
+				</div>
 			</div>
 
 		</form>
@@ -62,11 +62,11 @@
 	<!--=========SWEETALERT============-->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!--=========BOOTSTRAP/JQUERY============-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41jstQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<!--=========JS============-->
+	<!--=========js============-->
 	<script src="js/menu.js"></script>
 	<script src="js/hamburguer.js"></script>
 	<script src="js/mascara_validacao.js"></script>

@@ -5,23 +5,23 @@
 		<title>Index</title>
 		<!--=========reset============-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!--=========CSS============-->
+		<!--=========css============-->
 		<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 		<link rel="stylesheet" type="text/css" href="css/hamburguer_menu.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="icon" href="img/logocontrolapet.png" type="image/x-icon" >
 
-	 <link href='css/calendar/fullcalendar.min.css' rel='stylesheet' />
-<link href='css/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<script src='js/calendar/lib/moment.min.js'></script>
-<script src='js/calendar/lib/jquery.min.js'></script>
-<script src='js/calendar/fullcalendar.min.js'></script>
-<script src='js/calendar/locale/pt-br.js'></script>
-<script src='js/calendar/calendario1.js'></script>
-<script src='js/calendar/calendario2.js'></script>
+		<link href='css/calendar/fullcalendar.min.css' rel='stylesheet' />
+		<link href='css/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+		<script src='js/calendar/lib/moment.min.js'></script>
+		<script src='js/calendar/lib/jquery.min.js'></script>
+		<script src='js/calendar/fullcalendar.min.js'></script>
+		<script src='js/calendar/locale/pt-br.js'></script>
+		<script src='js/calendar/calendario1.js'></script>
+		<script src='js/calendar/calendario2.js'></script>
 
 
-	<!--=========BOOTSTRAP============-->
+		<!--=========BOOTSTRAP============-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 		<!--=========/BOOTSTRAP============-->
 
@@ -29,13 +29,13 @@
 	</head>
 	<body>
 		<header>
-			<img src="img/logoControlaPetWhite.png" alt="Controla Pet">
+			<img src="img/logoControlaPetWhite.png" class="logoHeader" alt="Controla Pet">
 		</header>
 
 		<main class="main">
 			<div id="menuLateral">
 				<div class="menuLateralPerfil">
-					<img class="perfilImg" src="img/perfil.png" alt="teste">
+					<img class="perfilImg" src="img/perfil.png" alt="patinha">
 					<h3>Pricila Santos</h3>
 				</div>
 				<div class="menuLateralItens">
@@ -80,177 +80,203 @@
 				<div class="titulo">
 					<div class="itensTitulo">
 						<div class="circulo">
-							<img src="img/5.png" alt="banana">
+							<img src="img/5.png" alt="Imagem Animal">
 						</div>
 						<h2>Agenda</h2>
 					</div>
 				</div>
+				</div>
 
 				<!--===========INSIRA AQUI SEU CONTEUDO===============-->
- <div id='calendar'></div>
-
-  <div class="modal fade" id="visualizar" tabindex="-1"
-  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" >Dados do cliente</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-	<div class="modal-body">
-	<div class="visualizar">
+				<!-- 
+				<div class="centralizado">
+					<div class="destacadoCimaBaixo formulario">
+						<div id='calendar'></div>
+					</div>
+				</div>
 
 
-		<dl Class = "dl-horizontal">
-			<dt>Nome:</dt>
-			<dd id="Nome"></dd>
-             <dt>Data:</dt>
-			<dd id="DataInicio"></dd>
-		</dl>
-     </div>
+				<div class="modal fade" id="visualizar" tabindex="-1"
+				role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-	 <div class="modal-footer">
-		<button type="button" class="btn btn-canc-vis btn-warning" >Editar</button>
-        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
-		 </div>
-		<div class="formModal">
-		 <div class="form-group">
-    <label for="exampleInputName">Nome Dono</label>
-    <input type="text" class="form-control" id="exampleInputName" placeholder="Nome">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputName">Nome Do animal</label>
-    <input type="text" class="form-control" id="NomeAnimal" >
-  </div>
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title text-center" >Dados do cliente</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="visualizar">
 
-   <div class="form-group">
-    <label for="exampleInputName">Data e hora :</label>
-    <input type="text" class="form-control"  name="start" id="datahora">
-  </div>
 
-				<button type="button" class="btn btn-canc-edit btn-primary" >Cancelar</button>
+								<dl Class = "dl-horizontal">
+									<dt>Nome:</dt>
+									<dd id="Nome"></dd>
+									<dt>Data:</dt>
+									<dd id="DataInicio"></dd>
+								</dl>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-canc-vis btn-warning" >Editar</button>
+								<button type="button" class="btnSecundario" data-dismiss="modal">Fechar</button>
+							</div>
+							<div class="formModal">
+								<div class="form-group">
+									<label for="exampleInputName">Nome Dono</label>
+									<input type="text" class="form-control" id="exampleInputName" placeholder="Nome">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputName">Nome Do animal</label>
+									<input type="text" class="form-control" id="NomeAnimal" >
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputName">Data e hora :</label>
+									<input type="text" class="form-control"  name="start" id="datahora">
+								</div>
+
+								<button type="button" class="btn btn-canc-edit btn-primary" >Cancelar</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="modal fade" id="cadastrar" tabindex="-1"
+			role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title text-center" >Cadastrar</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">-->
+						<!-- Usa o form para criar alimentar o evento para gravar dados na google agenda -->
+												<!--<form>
+							<div class="form-group">
+								<label for="exampleInputName">Nome Dono</label>
+								<input type="text" class="form-control" id="exampleInputName" placeholder="Nome">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputName">Nome Do animal</label>
+								<input type="text" class="form-control" id="exampleInputAnimal" placeholder="Name do Animal">
+							</div>
+
+							<div class="form-group">
+								<label for="exampleInputName">Data e hora :</label>
+								<input type="text" class="form-control"  name="start" id="start">
+							</div>
+
+
+						</form>
+					</div>
+
+					<div class="modal-footer">
+
+						
+						<button type="button" class="btnPrincipal" >Salvar</button>		
+						<button type="button" class="btnSecundario" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
-      </div>
-    </div>
-  </div>
-</div>
 
+ -->
+		<div class="modal fade" id="cadastrar" tabindex="-1"
+		role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-center" >Cadastrar</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputName">Nome Dono</label>
+							<input type="text" class="form-control" id="exampleInputName" placeholder="Nome">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputName">Nome Do animal</label>
+							<input type="text" class="form-control" id="exampleInputAnimal" placeholder="Name do Animal">
+						</div>
 
-   <div class="modal fade" id="cadastrar" tabindex="-1"
-  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="form-group">
+							<label for="exampleInputName">Data e hora :</label>
+							<input type="text" class="form-control"  name="start" id="start">
+						</div>
 
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" >Cadastrar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-	<div class="modal-body">
-<!-- Usa o form para criar alimentar o evento para gravar dados na google agenda -->
-		<form>
-  <div class="form-group">
-    <label for="exampleInputName">Nome Dono</label>
-    <input type="text" class="form-control" id="exampleInputName" placeholder="Nome">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputName">Nome Do animal</label>
-    <input type="text" class="form-control" id="exampleInputAnimal" placeholder="Name do Animal">
-  </div>
+						<button type="button" class="btn btn-warning" >Salvar</button>
 
-   <div class="form-group">
-    <label for="exampleInputName">Data e hora :</label>
-    <input type="text" class="form-control"  name="start" id="start">
-  </div>
+					</form>
+				</div>
 
-  <button type="button" class="btn btn-warning" >Salvar</button>
+				<div class="modal-footer">
 
-</form>
-     </div>
-
-	 <div class="modal-footer">
-
-        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-   <div class="modal fade" id="cadastrar" tabindex="-1"
-  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" >Cadastrar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-	<div class="modal-body">
-		<form>
-  <div class="form-group">
-    <label for="exampleInputName">Nome Dono</label>
-    <input type="text" class="form-control" id="exampleInputName" placeholder="Nome">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputName">Nome Do animal</label>
-    <input type="text" class="form-control" id="exampleInputAnimal" placeholder="Name do Animal">
-  </div>
-
-   <div class="form-group">
-    <label for="exampleInputName">Data e hora :</label>
-    <input type="text" class="form-control"  name="start" id="start">
-  </div>
-
-  <button type="button" class="btn btn-warning" >Salvar</button>
-
-</form>
-     </div>
-
-	 <div class="modal-footer">
-
-        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+					<button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
 		</div>
-		</main>
-
-		<footer>
-			<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
-		</footer>
-		<!--=========SWEETALERT============-->
+	</div>
 
 
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalBemVindo" tabindex="-1" role="dialog" aria-labelledby="modal_1Label" aria-hidden="true" onload="carregaForm();">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_1Label">Bem vindo, @usuario!</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body centralizado">
+				<img src="img/personagemExclamacao.png" class="imgBoasVindas" alt="">
+			</div>
+			<div class="footerModal centralizado">
+				<button type="button" class="btnPrincipal clearMarginTop" data-dismiss="modal">ok!</button>
+			</div>
+		</div>
+	</div>
+</div>
+</main>
 
-		<!--=========BOOTSTRAP/JQUERY============-->
+<footer>
+	<small>Controla Pet © 2018 Todos Diretos reservados. Termos e Uso e Política de Privacidade</small>
+</footer>
+<!--=========SWEETALERT============-->
 
-<!--
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-		-->
-		<!--=========JS============-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-		<script src="js/menu.js"></script>
-		<script src="js/hamburguer.js"></script>
-		<script src="js/mascara_validacao.js"></script>
 
-	</body>
-	</html>
+<!--=========BOOTSTRAP/JQUERY============-->
+
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41jstQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+			<!--=========js============-->
+			<script src="js/Hamburguer.js"></script>
+			<script src="js/Mascara_Validacao.js"></script>
+			<script type="text/javascript" src="js/Geral.js"></script>
+
+		</body>
+		</html>
