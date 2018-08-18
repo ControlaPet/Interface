@@ -106,7 +106,10 @@
 	justify-content: center;
 	align-items:flex-start;
 }
-.btnPrincipal{
+.btnPrincipal{	
+	display: flex;	
+	justify-content: center;
+	align-items: center;
 	width: 250px;
 	height: 37px;
 	background-color: #ff6600;
@@ -117,7 +120,9 @@
 	margin-top: 25px;
 }
 .btnPrincipal:hover{
+	text-decoration: none;
 	background: #c14e01; 
+	color: #fff;
 	cursor: pointer;
 } 
 .btnSecundario{
