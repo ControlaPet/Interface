@@ -64,38 +64,32 @@
 							<div class="circulo">
 								<img src="img/5.png" alt="Imagem Animal">
 							</div>
-							<h2>Cadastro de Animal</h2>
+							<h2>Cadastro de Cliente</h2>
 						</div>
 					</div>
 
 					<!--===========INSIRA AQUI SEU CONTEUDO===============-->
 					<form method="post" class='formEtapas'>
-						<ul id="progress">
-							<li class="ativo"><label>Dados  	s</label></li>
-							<li><label>Responsável do animal</label></li>
-						</ul>
 							<fieldset>
 								<h2 class="tituloGrande">Dados Gerais</h2 class="tituloGrande">
 								<p>Digite algumas informações do animal!</p>
 
 									<input type="text" class="formEtapasInput" name="nome" placeholder="Nome" maxlength="50" />
-									<input type="text" class="formEtapasInput cpf" name="CPF" placeholder="CPF" maxlength="50" />
-									<input type="email" class="formEtapasInput email" name="Email" placeholder="Email" maxlength="50" />
-									<input type="text" class="formEtapasInput cep" id="cep" name="CEP" placeholder="CEP" maxlength="50" onfocusout="preenche_endereco(this)" />
+									<input type="text" class="formEtapasInput cpf" name="cpf" placeholder="CPF" maxlength="50" />
+									<input type="email" class="formEtapasInput email" name="email" placeholder="Email" maxlength="50" />
+									<input type="text" class="formEtapasInput cep" id="cep" name="cep" placeholder="CEP" maxlength="50" onfocusout="preenche_endereco(this)" />
 									<input type="text" class="formEtapasInput" id="endereco" name="endereco" placeholder="endereco" maxlength="50" />
 									<input type="text" class="formEtapasInput" id="cidade" name="cidade" placeholder="cidade" maxlength="50" />
 									<input type="text" class="formEtapasInput" id="estado" name="estado" placeholder="estado" maxlength="50" />
 									<input type="text" class="formEtapasInput" id="bairro" name="bairro" placeholder="bairro" maxlength="50" />
 									<input type="text" class="formEtapasInput" id="numero" name="numero" placeholder="numero" maxlength="50" onkeydown="mascara_apenas_numeros(event);" />
-									<input type="text" id="Data" class="formEtapasInput data" name="data_nasc" placeholder="Data de Nascimento"/>
+									<input type="text" id="Data" class="formEtapasInput data" name="datanasc" placeholder="Data de Nascimento"/>
 
-									<p>Sexo</p>
-									<div class="formEtapasDupla destacadoCimaBaixo clearMarginTop">
-										<div class="formEtapasRadio">
-											<label><input type="radio" name="sexo" >Masculino</label>
-											<label><input type="radio" name="sexo" >Feminino</label>
-										</div>
-									</div>
+									<p>Tipo de cliente</p>
+									<select id="tipoCliente" class="formInput destacadoCimaBaixo clearMarginTop" required>
+										<option value="masculino">Masculino</option>
+										<option value="feminino">Feminino</option>
+									</select>
 									<p>Tipo de cliente</p>
 									<select id="tipoCliente" class="formInput destacadoCimaBaixo clearMarginTop" required>
 										<option value="Mensal">Mensal</option>
@@ -103,23 +97,11 @@
 										<option value="Plano">Plano</option>
 									</select>
 									<div class="containerBotoes linha centralizado">
-										<input type="submit" name="next" class="next acao btnPrincipal destacadoEsquerdaDireita" value="Proximo"/>
+										<input type="submit" name="fim" class="acao btnPrincipal clearMarginTop" value="Cadastrar"/>
 									</div>
 								</fieldset>
 
-								
-								<fieldset>
-									<h2 class="tituloGrande">Responsáveis</h2 class="tituloGrande">
-										<p>Por favor, nos diga quais os responsáveis pelo animal</p>
-										<input type="search" class="formEtapasInput cpf" name="cpfresponsavel" placeholder="Digite o CPF do Responsável..."/ maxlength="14">
-										<input type="text" class="formEtapasInput" name="nome" placeholder="Nome" maxlength="50">
-										<input type="tel"  class="formEtapasInput ddd_celular" name="telefone" placeholder="Telefone" maxlength="14">
-									<div class="containerBotoes linha centralizado">
-										<input type="submit" name="prev" class="prev acao btnPrincipal destacadoEsquerdaDireita" value="Anterior"/>
-										<input type="submit" name="fim'" class="acao btnPrincipal clearMarginTop" value="Finalizar"/>
-									</div>
 
-									</fieldset>
 
 
 								</form>

@@ -24,8 +24,7 @@
 		<header>
 			<img src="img/logocontrolapetwhite.png" class="logoHeader" alt="Controla Pet">
 		</header>
-
-		<main class="main">
+		<main class="main"	onload="DisableCampos();">
 			<div id="menuLateral">
 				<div class="menuLateralPerfil">
 					<img class="perfilImg" src="img/perfil.png" alt="teste">
@@ -75,21 +74,21 @@
 									<div class="coluna destacadoEsquerdaDireita">
 										<div class="dupla">
 											<label for="#" class="formLabel">Nome:</label>
-											<input id="endereco" class="formInput" type="text" value="Luluzinho" disabled>
+											<input id="endereco" class="formInput" type="text" value="Luluzinho" >
 										</div>
 										<div class="dupla">
 											<label for="#" class="formLabel">Raça:</label>
-											<input id="endereco" class="formInput" type="text" value="Cachorro" disabled>
+											<input id="endereco" class="formInput" type="text" value="Cachorro" >
 										</div>
 									</div>
 									<div class="coluna destacadoEsquerdaDireita">
 										<div class="dupla">
 											<label for="#" class="formLabel">Espécie:</label>
-											<input id="endereco" class="formInput" type="text" value="Pitbull" disabled>
+											<input id="endereco" class="formInput" type="text" value="Pitbull" >
 										</div>
 										<div class="dupla">
 											<label for="#" class="formLabel">Dono:</label>
-											<input id="endereco" class="formInput" type="text" value="Janete Samaritana" disabled>
+											<input id="endereco" class="formInput" type="text" value="Janete Samaritana" >
 										</div>
 									</div>
 								</div>
@@ -116,28 +115,28 @@
 								</div>
 								<div class="dupla">
 									<label for="#" class="formLabel">Nome Serviço</label>
-									<input disabled class="formInput" type="text" placeholder="Nome do Serviço" autofocus name="nome" required>
+									<input  class="formInput" type="text" placeholder="Nome do Serviço" autofocus name="nome" required>
 								</div>
 								<div class="dupla">
 									<label for="#" class="formLabel">Descrição</label>
-									<input disabled class="formInput" type="text" placeholder="Descrição" name="descricao" required>
+									<input  class="formInput" type="text" placeholder="Descrição" name="descricao" required>
 								</div>
 								<div class="dupla">
 									<label for="#" class="formLabel">Espécie</label>
-									<input disabled class="formInput" type="text" placeholder="Espécie" name="descricao" required>
+									<input  class="formInput" type="text" placeholder="Espécie" name="descricao" required>
 								</div>
 								<div class="dupla">
 									<label for="#" class="formLabel">Preço</label>
-									<input disabled class="formInput" type="text" placeholder="Preço" name="descricao" required>
+									<input  class="formInput dinheiro" type="text" placeholder="Preço" name="descricao" required>
 								</div>
 								<div class="dupla">
 									<label for="#" class="formLabel">Tipo Procedimento</label>
-									<input disabled class="formInput" type="text" placeholder="Tipo de Procedimento" name="descricao" required>
+									<input  class="formInput" type="text" placeholder="Tipo de Procedimento" name="descricao" required>
 								</div>
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btnSecundario clearMarginTop" data-dismiss="modal">Fechar</button>
-						        <button type="button" class="btnPrincipal clearMarginTop" onclick="habilitaCampos();">Editar</button>
+						        <button type="button" class="btnPrincipal clearMarginTop" onclick="DisableCampos();">Editar</button>
 						      </div>
 						    </div>
 						  </div>
@@ -151,21 +150,21 @@
 								<div class="coluna destacadoEsquerdaDireita">
 									<div class="dupla">
 										<label for="#" class="formLabel">Nome:</label>
-										<input id="endereco" class="formInput" type="text" value="Xuxinha" disabled>
+										<input id="endereco" class="formInput" type="text" value="Xuxinha" >
 									</div>
 									<div class="dupla">
 										<label for="#" class="formLabel">Raça:</label>
-										<input id="endereco" class="formInput" type="text" value="Gato" disabled>
+										<input id="endereco" class="formInput" type="text" value="Gato" >
 									</div>
 								</div>
 								<div class="coluna destacadoEsquerdaDireita">
 									<div class="dupla">
 										<label for="#" class="formLabel">Espécie:</label>
-										<input id="endereco" class="formInput" type="text" value="Árabe" disabled>
+										<input id="endereco" class="formInput" type="text" value="Árabe" >
 									</div>
 									<div class="dupla">
 										<label for="#" class="formLabel">Dono:</label>
-										<input id="endereco" class="formInput" type="text" value="João Moraes" disabled>
+										<input id="endereco" class="formInput" type="text" value="João Moraes" >
 									</div>
 								</div>
 							</div>
@@ -179,21 +178,21 @@
 								<div class="coluna destacadoEsquerdaDireita">
 									<div class="dupla">
 										<label for="#" class="formLabel">Nome:</label>
-										<input id="endereco" class="formInput" type="text" value="Doritos" disabled>
+										<input id="endereco" class="formInput" type="text" value="Doritos" >
 									</div>
 									<div class="dupla">
 										<label for="#" class="formLabel">Raça:</label>
-										<input id="endereco" class="formInput" type="text" value="Ave" disabled>
+										<input id="endereco" class="formInput" type="text" value="Ave" >
 									</div>
 								</div>
 								<div class="coluna destacadoEsquerdaDireita">
 									<div class="dupla">
 										<label for="#" class="formLabel">Espécie:</label>
-										<input id="endereco" class="formInput" type="text" value="Papagaio" disabled>
+										<input id="endereco" class="formInput" type="text" value="Papagaio" >
 									</div>
 									<div class="dupla">
 										<label for="#" class="formLabel">Dono:</label>
-										<input id="endereco" class="formInput" type="text" value="Francisca Dantas" disabled>
+										<input id="endereco" class="formInput" type="text" value="Francisca Dantas" >
 									</div>
 								</div>
 							</div>
@@ -205,7 +204,7 @@
 					<div class="centralizado destacadoCimaBaixo">
 						<nav aria-label="...">
 							<ul class="pagination">
-								<li class="page-item disabled">
+								<li class="page-item ">
 									<a class="page-link" href="#" tabindex="-1">Anterior</a>
 								</li>
 								<li class="page-item" id="paginationActive">
@@ -247,7 +246,7 @@
 			<!--=========js============-->
 			<script src="js/Hamburguer.js"></script>
 			<script src="js/Mascara_Validacao.js"></script>
-			<script type="text/javascript" src="js/Geral.js"></script>
+			<script src="js/Geral.js"></script>
 
 		</body>
 		</html>

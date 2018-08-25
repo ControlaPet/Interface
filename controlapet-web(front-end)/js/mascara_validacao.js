@@ -635,6 +635,7 @@ $(document).ready(function(){
   $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
   $('.hora').mask('000.000.000.000.000,00', {reverse: true});
   $('.percent').mask('##0,00%', {reverse: true});
+  $('.dinheiro').mask('##0,00', {reverse: true});
   $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
   $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
   $('.fallback').mask("00r00r0000", {

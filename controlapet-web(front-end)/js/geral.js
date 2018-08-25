@@ -50,6 +50,14 @@ $(window).on('load',function(){
 
 
 
-function habilitaCampos(){
-	document.getElementsByClassName("input.formInput").prop('disabled', false);
+function DisableCampos(){
+		$("input").attr('disabled','disabled');
+}
+function EditFields(){
+	if ($("input").attr('disabled','disabled')) {
+		$("input").removeAttr('disabled');
+	}
+	else {
+		$("input").attr('disabled','disabled');
+	}
 }
