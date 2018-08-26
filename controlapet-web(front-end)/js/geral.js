@@ -61,3 +61,11 @@ function EditFields(){
 		$("input").attr('disabled','disabled');
 	}
 }
+
+//=====================Ativar/Desativar RadioButton=======================
+function yesnoCheck() {
+	if (document.getElementById('yesCheck').checked) {
+		document.getElementById('ifYes').style.visibility = 'visible';
+	}
+	else document.getElementById('ifYes').style.visibility = 'hidden';
+}
