@@ -512,6 +512,15 @@ p{
 	font-weight:bold;
 	margin-top:25px;
 }
+
+.pModal{
+	margin-top: 15px;
+}
+
+.pEspaco{
+	margin-top: 15px;
+}
+
 .tituloGrande, .tituloExtraGrande{
 	color: #000;	
 }
